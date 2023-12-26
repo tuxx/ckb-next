@@ -64,32 +64,26 @@ static const keypatch k55proxtpatch[] = {
 };
 
 static const keypatch DCRGBPpatch[] = {
-    { 228, "mouse4",  LED_MOUSE + 2, SCAN_MOUSE | BTN_SIDE  }, // "bar1"
-    { 229, "mouse5",  LED_MOUSE + 1, SCAN_MOUSE | BTN_EXTRA }, // "bar0"
-    { 233, "profdn",             -1, KEY_CORSAIR },
-    { 258, "back",    LED_MOUSE + 6, KEY_NONE }, // "logo"
-    { 260, "wheel",   LED_MOUSE + 0, KEY_NONE },
-    { 261, "thumb",   LED_MOUSE + 5, KEY_NONE },
-    { 262, "side",    LED_MOUSE + 7, KEY_NONE },
-    { 263, "dpiw0",   LED_MOUSE + 11, KEY_NONE }, // sniper led
-    { 264, "dpiw1",   LED_MOUSE + 8, KEY_NONE },
-    { 265, "dpiw2",   LED_MOUSE + 9, KEY_NONE },
-    { 266, "dpiw3",   LED_MOUSE +10, KEY_NONE },
-    { 267, "bar3",    LED_MOUSE + 3, KEY_NONE }, // "bar2"
-    { 268, "bar4",    LED_MOUSE + 4, KEY_NONE }, // "bar3"
+    { 209, "mouse5",  LED_MOUSE + 1, SCAN_MOUSE | BTN_EXTRA }, // "bar0"
+    { 208, "mouse4",  LED_MOUSE + 2, SCAN_MOUSE | BTN_SIDE  }, // "bar1"
+    { 228, 0,  -1, KEY_NONE },
+    { 213, "profdn",  -1, KEY_CORSAIR },
+    { 238, "back",    LED_MOUSE + 6, KEY_NONE }, // "logo"
+    { 239, 0,     -1, KEY_NONE },
+    { 240, "wheel",   LED_MOUSE + 0, KEY_NONE },
+    { 241, "thumb",   LED_MOUSE + 5, KEY_NONE },
+    { 242, "side",    LED_MOUSE + 7, KEY_NONE },
+    { 243, "dpiw0",    LED_MOUSE + 11, KEY_NONE }, // sniper led
+    { 244, "dpiw1",    LED_MOUSE + 8, KEY_NONE },
+    { 245, "dpiw2",    LED_MOUSE + 9, KEY_NONE },
+    { 246, "dpiw3",    LED_MOUSE +10, KEY_NONE },
+    { 247, "bar3",    LED_MOUSE + 3, KEY_NONE }, // "bar2"
+    { 248, "bar4",    LED_MOUSE + 4, KEY_NONE }, // "bar3"
 };
-
-
 
 keypatch k100patch[] = {
     {114, "lock", 114, KEY_CORSAIR },
 };
-
-keypatch k70tklpatch[] = {
-    { 114, "lock",    114, KEY_CORSAIR },
-    {   1, "logo",      1, KEY_NONE },
-};
-
 
 #define ADD_PATCH(vendor, product, patch) \
     { (vendor), (product), (patch), sizeof(patch)/sizeof(*patch) }
@@ -101,7 +95,6 @@ static const keypatches mappatches[] = {
     ADD_PATCH(V_CORSAIR, P_M55_RGB_PRO,  m55patch),
     ADD_PATCH(V_CORSAIR, P_M95,          m95patch),
     ADD_PATCH(V_CORSAIR, P_IRONCLAW_W_U, icwpatch),
-   //ADD_PATCH(V_CORSAIR, P_SCIMITAR_ELITE_W_U, DCRGBPpatch),
     ADD_PATCH(V_CORSAIR, P_HARPOON_WL_U, harpoonwlpatch),
     ADD_PATCH(V_CORSAIR, P_KATAR_PRO_XT, katarproxtpatch),
     ADD_PATCH(V_CORSAIR, P_KATAR_PRO,    katarproxtpatch),
@@ -112,8 +105,6 @@ static const keypatches mappatches[] = {
     ADD_PATCH(V_CORSAIR, P_DARK_CORE_RGB_PRO_SE,   DCRGBPpatch),
     ADD_PATCH(V_CORSAIR, P_K100_OPTICAL,         k100patch),
     ADD_PATCH(V_CORSAIR, P_K100_MECHANICAL,         k100patch),
-    ADD_PATCH(V_CORSAIR, P_K100_OPTICAL_VARIANT,         k100patch),
-    ADD_PATCH(V_CORSAIR, P_K70_TKL,      k70tklpatch),
 };
 
 #define KEYPATCHES_LEN sizeof(mappatches)/sizeof(*mappatches)

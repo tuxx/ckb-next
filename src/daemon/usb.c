@@ -35,7 +35,6 @@ const dpi_list mouse_dpi_list[] = {
     { P_IRONCLAW, 18000 },
     { P_NIGHTSWORD, 18000},
     { P_IRONCLAW_W_U, 18000 },
-    { P_SCIMITAR_ELITE_W_U , 26000 },
     { P_HARPOON_WL_U, 10000 },
     { P_DARK_CORE_RGB_PRO, 18000 },
     { P_DARK_CORE_RGB_PRO_SE, 18000 },
@@ -75,7 +74,6 @@ const device_desc models[] = {
     { V_CORSAIR, P_K70_MK2, },
     { V_CORSAIR, P_K70_MK2SE, },
     { V_CORSAIR, P_K70_MK2LP, },
-    { V_CORSAIR, P_K70_TKL, },
     { V_CORSAIR, P_K90_LEGACY, },
     { V_CORSAIR, P_K95, },
     { V_CORSAIR, P_K95_LEGACY, },
@@ -89,7 +87,6 @@ const device_desc models[] = {
     { V_CORSAIR, P_K57_U, },
     { V_CORSAIR, P_K100_OPTICAL, },
     { V_CORSAIR, P_K100_MECHANICAL, },
-    { V_CORSAIR, P_K100_OPTICAL_VARIANT, },
     { V_CORSAIR, P_K65_MINI, },
     // Mice
     { V_CORSAIR, P_M55_RGB_PRO, },
@@ -104,8 +101,6 @@ const device_desc models[] = {
     { V_CORSAIR, P_SCIMITAR, },
     { V_CORSAIR, P_SCIMITAR_PRO, },
     { V_CORSAIR, P_SCIMITAR_ELITE, },
-    { V_CORSAIR, P_SCIMITAR_ELITE_W_U, },
-    { V_CORSAIR, P_SCIMITAR_ELITE_W_D, },
     { V_CORSAIR, P_SABRE_O2, },
     { V_CORSAIR, P_HARPOON, },
     { V_CORSAIR, P_HARPOON_PRO, },
@@ -194,7 +189,7 @@ const char* vendor_str(ushort vendor){
 /// product_str() needs the \a product \a ID
 ///
 const char* product_str(ushort product){
-    if(product == P_K100_OPTICAL || product == P_K100_MECHANICAL || product == P_K100_OPTICAL_VARIANT)
+    if(product == P_K100_OPTICAL || product == P_K100_MECHANICAL)
         return "k100";
     if(product == P_K95_LEGACY)
         return "k95l";
@@ -206,8 +201,6 @@ const char* product_str(ushort product){
         return "k70";
     if(product == P_K70_MK2 || product == P_K70_MK2SE || product == P_K70_MK2LP)
         return "k70mk2";
-    if(product == P_K70_TKL)
-        return "k70tkl";
     if(product == P_K68 || product == P_K68_NRGB)
         return "k68";
     if(product == P_K65 || product == P_K65_LEGACY || product == P_K65_LUX || product == P_K65_RFIRE)
@@ -244,7 +237,7 @@ const char* product_str(ushort product){
         return "m65e";
     if(product == P_SABRE_O || product == P_SABRE_L || product == P_SABRE_N || product == P_SABRE_O2)
         return "sabre";
-    if(product == P_SCIMITAR || product == P_SCIMITAR_PRO || product == P_SCIMITAR_ELITE || product == P_SCIMITAR_ELITE_W_D ||product == P_SCIMITAR_ELITE_W_U )
+    if(product == P_SCIMITAR || product == P_SCIMITAR_PRO || product == P_SCIMITAR_ELITE)
         return "scimitar";
     if(product == P_HARPOON || product == P_HARPOON_PRO)
         return "harpoon";

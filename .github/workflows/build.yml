@@ -3,7 +3,6 @@ name: Build
 
 on:
   - push
-  - pull_request
 
 jobs:
   Linux:
@@ -12,22 +11,18 @@ jobs:
     strategy:
       matrix:
         image:
+          - 'amazonlinux:2'
           - 'archlinux:latest'
           - 'almalinux:8'
-          - 'almalinux:9'
           - 'rockylinux:8'
-          - 'rockylinux:9'
           - 'debian:10'
           - 'debian:11'
-          - 'debian:12'
-          - 'fedora:37'
-          - 'fedora:38'
-          - 'fedora:rawhide'
+          - 'fedora:35'
+          - 'fedora:36'
           - 'ubuntu:20.04'
           - 'ubuntu:22.04'
-          - 'ubuntu:rolling'
         build_type:
-          - Debug
+          - Release
         compiler:
           - GNU
       fail-fast: false
