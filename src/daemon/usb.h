@@ -107,6 +107,7 @@
 
 #define P_K100_OPTICAL       0x1b7c
 #define P_K100_MECHANICAL    0x1b7d
+#define P_K100_WL    0x1bab
 
 #define P_M55_RGB_PRO        0x1b70
 
